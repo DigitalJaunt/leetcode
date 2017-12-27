@@ -1,11 +1,11 @@
 class Solution {
 public:
-    int reverse(int x) {
+	int reverse(int x) {
 		const int MAX = 2147483647;
 		const int MIN = -2147483648;
-        bool negative = x < 0;		
+		bool negative = x < 0;		
 		int answer = 0;
-        while (x)
+		while (x)
 		{
 			int digit = x % 10;
 			bool overflow = negative ? answer < ((MIN - digit) / 10) : answer > ((MAX - digit) / 10);
@@ -18,5 +18,5 @@ public:
 			x /= 10;
 		}
 		return answer;
-    }
+	}
 };
