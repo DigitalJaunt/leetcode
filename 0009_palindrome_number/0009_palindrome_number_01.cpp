@@ -1,8 +1,8 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        if (x < 0)
-            return false;
+		if (x < 0)
+			return false;
 		if (x < 10)
 			return true;
 		int original = x;
@@ -14,5 +14,5 @@ public:
 			x /= 10;
 		}
 		return (reverse == original);
-    }
+	}
 };
