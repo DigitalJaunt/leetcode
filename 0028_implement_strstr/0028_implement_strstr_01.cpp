@@ -16,7 +16,7 @@ public:
 				if (j == needle.length())
 					return i;
 				else
-					i += needle.length();
+					i += j;
 			}
 			else
 			{
