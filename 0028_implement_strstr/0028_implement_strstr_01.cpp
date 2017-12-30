@@ -3,6 +3,8 @@ public:
     int strStr(string haystack, string needle) {
 		if (needle.length() > haystack.length())
 			return -1;
+		if (needle == haystack || needle.empty())
+			return 0;
 		int i = 0;
 		while (i <= haystack.length()-needle.length())
 		{
@@ -23,8 +25,6 @@ public:
 				++i;
 			}
 		}
-		// If we got here, then either needle wasn't found
-		// or haystack and needle are both empty
-		return (haystack.empty()) ? 0 : -1;
+		return -1;
     }
 };
