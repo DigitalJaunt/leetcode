@@ -1,6 +1,6 @@
 @echo off
 set /p name="Enter directory name: "
-if %name%="" exit
+if %name%=="" exit
 set fulldir=%cd%\%name%
 mkdir %fulldir%
 set textfile=%fulldir%\%name%.txt
